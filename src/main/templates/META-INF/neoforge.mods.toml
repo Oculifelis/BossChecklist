@@ -18,6 +18,8 @@ Adds a convenient list of bosses to the game with brief information about them.
 [[mixins]]
 config="boss_checklist.mixins.json"
 
+${selftest_mixins}
+
 [[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
