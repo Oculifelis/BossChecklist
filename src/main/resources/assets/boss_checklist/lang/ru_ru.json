@@ -78,7 +78,7 @@
   "command.boss_checklist.boss_marked_successfully_false": "Босс \"%s\" помечен как ещё не побеждённый в этом мире.",
 
   "modmenu.descriptionTranslation.boss_checklist": "Добавляет удобный список всех боссов из вашей сборки.",
-  "fml.menu.mods.info.description.boss_checklist": "Добавляет удобный список всех боссов из вашей сборки.",
+  "neoforge.screen.mods.info.description.boss_checklist": "Добавляет удобный список всех боссов из вашей сборки.",
 
   
 
