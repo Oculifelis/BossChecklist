@@ -60,10 +60,12 @@ neoForge {
 // The in-game self-test, only in -Pselftest runs (never build a release jar with -Pselftest)
 if (project.hasProperty('selftest')) {
     sourceSets.main.java.srcDir 'src/selftest/java'
+    sourceSets.main.resources.srcDir 'src/selftest/resources'
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [
+            selftest_mixins        : project.hasProperty('selftest') ? '[[mixins]]\nconfig="boss_checklist_selftest.mixins.json"' : '',
             minecraft_version_range: minecraft_version_range,
             neo_version_range      : neo_version_range,
             mod_id                 : mod_id,
