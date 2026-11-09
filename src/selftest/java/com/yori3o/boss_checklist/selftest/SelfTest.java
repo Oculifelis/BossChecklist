@@ -117,13 +117,22 @@ public final class SelfTest {
                 LOG.info("BCTEST client registry: {} bosses, {} vanilla, {} ultimaratio", all.size(), vanilla, ur);
                 LOG.info("BCTEST client ids: {}", all);
                 check("vanilla bosses listed", vanilla >= 3);
-                check("Ultima Ratio bosses listed", ur >= 9);
-                for (String id : List.of("minecraft:wither", "minecraft:ender_dragon", "ultimaratio:ultrum", "ultimaratio:hollow_sun")) {
+                // Ultima Ratio's checks run only when its Boss Checklist data is loaded beside it
+                boolean urData = net.neoforged.fml.ModList.get().isLoaded("ultimaratio");
+                LOG.info("BCTEST Ultima Ratio loaded: {}", urData);
+                if (urData) {
+                    check("Ultima Ratio bosses listed", ur >= 9);
+                }
+                List<String> serverIds = new ArrayList<>(List.of("minecraft:wither", "minecraft:ender_dragon", "minecraft:elder_guardian"));
+                if (urData) {
+                    serverIds.addAll(List.of("ultimaratio:ultrum", "ultimaratio:hollow_sun"));
+                }
+                for (String id : serverIds) {
                     check("server counts " + id + " as a boss", ServerBossIdsLoader.isBoss(id));
                 }
                 check("server does not count minecraft:zombie", !ServerBossIdsLoader.isBoss("minecraft:zombie"));
                 for (String id : all) {
-                    if (id.startsWith("ultimaratio:") || id.equals("minecraft:wither")) {
+                    if (id.startsWith("ultimaratio:") || id.equals("minecraft:wither") || id.equals("minecraft:elder_guardian")) {
                         BOSS_IDS.add(id);
                     }
                 }
