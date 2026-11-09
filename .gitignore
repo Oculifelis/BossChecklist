@@ -18,3 +18,9 @@ classes/
 .vscode/
 logs/
 notes.txt
+# local notes for tools, never public
+/AGENTS.md
+
+# local build and test logs
+build-*.log
+client-*.log
