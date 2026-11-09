@@ -70,7 +70,7 @@
   "command.boss_checklist.boss_marked_successfully_false": "Boss \"%s\" is marked as not yet defeated in this world.",
 
   "modmenu.descriptionTranslation.boss_checklist": "Adds a convenient list of all bosses from your modpack.",
-  "fml.menu.mods.info.description.boss_checklist": "Adds a convenient list of all bosses from your modpack.",
+  "neoforge.screen.mods.info.description.boss_checklist": "Adds a convenient list of all bosses from your modpack.",
 
   
 
