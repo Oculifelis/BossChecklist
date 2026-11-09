@@ -1,40 +1,26 @@
-# gradle
-
-.gradle/
 build/
-out/
-classes/
-
-# eclipse
-
-*.launch
-
-# idea
-
-.idea/
-*.iml
 *.ipr
+run/
 *.iws
-
-# vscode
-
-.settings/
-.vscode/
+out/
+*.iml
+.gradle/
+output/
 bin/
+libs/
+
 .classpath
 .project
+.settings/org.eclipse.core.resources.prefs
+.idea/
+classes/
 
-# macos
+.vscode/
+logs/
+notes.txt
+# local notes for tools, never public
+/AGENTS.md
 
-*.DS_Store
-
-# fabric
-
-run/
-
-# java
-
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
+# local build and test logs
+build-*.log
+client-*.log
