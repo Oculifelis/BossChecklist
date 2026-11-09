@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+issueTrackerURL="https://github.com/yori3o/BossChecklist/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="Boss Checklist"
+displayURL="https://modrinth.com/mod/boss-checklist"
+logoFile="logo.png"
+authors="Yori3o"
+credits="Boss Checklist by Yori3o (MIT). NeoForge port by Oculifelis."
+description='''
+Adds a convenient list of bosses to the game with brief information about them.
+'''
+
+[[mixins]]
+config="boss_checklist.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="${neo_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
