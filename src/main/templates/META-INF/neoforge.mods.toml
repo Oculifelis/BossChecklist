@@ -7,9 +7,9 @@ issueTrackerURL="https://github.com/yori3o/BossChecklist/issues"
 modId="${mod_id}"
 version="${mod_version}"
 displayName="Boss Checklist"
-displayURL="https://modrinth.com/mod/boss-checklist"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/boss-checklist"
 logoFile="logo.png"
-authors="Yori3o"
+authors="Yori3o, Oculifelis"
 credits="Boss Checklist by Yori3o (MIT). NeoForge port by Oculifelis."
 description='''
 Adds a convenient list of bosses to the game with brief information about them.
