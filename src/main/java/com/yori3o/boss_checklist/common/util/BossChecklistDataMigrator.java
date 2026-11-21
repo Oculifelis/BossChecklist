@@ -3,7 +3,7 @@ package com.yori3o.boss_checklist.common.util;
 
 import com.yori3o.boss_checklist.common.client.data.ClientDataSaver;
 
-import net.minecraft.client.Minecraft;
+import net.neoforged.fml.loading.FMLPaths;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,12 +20,7 @@ public class BossChecklistDataMigrator {
 
 
     public static void migrateIfNeeded() {
-        Minecraft mc = Minecraft.getInstance();
-        if (mc == null) {
-            LoggerUtil.error("Failed to migrate data due to Minecraft.getInstance() is null.");
-            return;
-        }
-        File gameDir = mc.gameDirectory;
+        File gameDir = FMLPaths.GAMEDIR.get().toFile();
         
         File oldDir = new File(gameDir, OLD_FOLDER);
         File newDir = new File(gameDir, NEW_FOLDER);
